@@ -1,0 +1,69 @@
+  
+//----------------------Variables-----------------------------------
+PImage image;
+PImage W;
+int i = 10*10/2;
+int x = -50;
+int y = 0;
+int count = 34;
+int count2 = 20;
+int count_xy = 1;
+
+//----------------------VoidStart-----------------------------------
+void setup () 
+{
+ size (50 , 50);
+ frameRate(1);
+
+ 
+
+ image = loadImage("SpriteSheetP&E.png");
+  W= loadImage("PjA-00017.jpg");
+}
+//----------------------VoidLoop------------------------------------
+void draw()
+{
+  fill (0,count2);
+  
+  if (x >= -50 && count > 0 )
+{
+  x= x + 50;
+  copy(image, x, y, i, i, 0, 0, i, i);
+  saveFrame("PjA-#####.png");
+  count = count - 1 ;
+  fill (0,count2);
+  
+}
+}
+/*
+//----------------------Variables-----------------------------------
+PImage image;
+int i = 10*10/2;
+int x = -50;
+int y = 0;
+int count = 17;
+int count2 = 0;
+int count_xy = 1;
+
+//----------------------VoidStart-----------------------------------
+void setup () 
+{
+ size (50 , 50);
+ frameRate(1);
+ 
+
+ image = loadImage("SpriteSheetP&EW.png");
+}
+//----------------------VoidLoop------------------------------------
+void draw()
+{
+ 
+  if (x >= -50 && count > 0 )
+{
+  x= x + 50;
+  copy(image, x, y, i, i, 0, 0, i, i);
+  saveFrame("PjA-#####.png");
+  count = count - 1 ;
+}
+}
+*/
